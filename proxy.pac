@@ -290,7 +290,8 @@ var autoproxy_host = {
   "zamalekfans.com": 1,
   "ziddu.com": 1,
   "zing.vn": 1,
-  "feed.baidu.com":1
+  "feed.baidu.com":1,
+  "mitm.it":1
 };
 function FindProxyForURL(url, host) {
     var lastPos;
