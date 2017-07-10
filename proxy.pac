@@ -297,7 +297,7 @@ function FindProxyForURL(url, host) {
     var lastPos;
     do {
         if (autoproxy_host.hasOwnProperty(host)) {
-    return 'PROXY 172.24.130.159:8080' ;
+    return 'PROXY 10.95.199.85:8092' ;
         }
         lastPos = host.indexOf('.') + 1;
         host = host.slice(lastPos);
