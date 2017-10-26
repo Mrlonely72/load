@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-control" content="60" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<meta name="format-detection" content="telephone=no" />
+<title>官居一品</title>
+<link rel="stylesheet" href="//tcnd.vaf.cn/common/base-h5.css">
+<style type="text/css">
+.fixed a{ position:absolute; width:34%; right:0%; height:100%; top:0;}
+.img3{ position:relative;}
+.img3 a{ position:absolute; width:38%; height:86%;top:0; right:33%;}
+.img8{ position:relative;}
+.img8 a{ position:absolute; width:50%; height:86%;top:7%; left:25%;}
+
+</style>
+<script>
+window.onload = function () {
+
+    function obj2string(o) {
+        var r = [];
+        if (typeof o == 'string') {
+            return '\"' + o.replace(/([\'\"\\])/g, '\\$1').replace(/(\n)/g, '\\n').replace(/(\r)/g, '\\r').replace(/(\t)/g, '\\t') + '\"';
+        }
+        if (typeof o == 'object') {
+            if (!o.sort) {
+                for (var i in o) {
+                    r.push('\"' + i + '\"' + ':' + obj2string(o[i]));
+                }
+                if (!!document.all && !/^\n?function\s*toString\(\)\s*\{\n?\s*\[native code\]\n?\s*\}\n?\s*$/.test(o.toString)) {
+                    r.push('toString:' + o.toString.toString());
+                }
+                r = '{' + r.join() + '}';
+            } else {
+                for (var i = 0; i < o.length; i++) {
+                    r.push(obj2string(o[i]))
+                }
+                r = '[' + r.join() + ']';
+            }
+            return r;
+        }
+        return o.toString();
+    }
+
+    function JSONstringify(params) {
+        try {
+            if (performance && performance.timing) {
+                var result =obj2string(performance.timing);
+                return result;
+            } else {
+                return '{}'
+            }
+        } catch (e) {
+            console.log('====performance JSONstringify error:' + e);
+        }
+    }
+
+    function box() {
+        var defaultParams = {
+            min_v: 2
+        };
+        try {
+            var json = JSONstringify(defaultParams);
+
+            console.log('====performance star:' + json);
+            confirm(json);
+
+        } catch (e) {
+            console.log('====performance box  error:' + e);
+        }
+    }
+    setTimeout(box, 200);
+};
+</script
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?9ea727367ada6b88918bbab7d6036fc3";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?032fa047b1deca9276e9417ec6c3f453";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+<div class="main">
+
+  <!--下载地址-->
+  <a onclick="_hmt.push(['_trackEvent', 'software', 'download', 'apkdown']);" class="link" data-ios="" data-android="https://apk.dian5.com/35952_1706.apk">
+  <div><img src="//tcnd.vaf.cn/gjyp-01/01.jpg" alt=""/></div>
+  <div><img src="//tcnd.vaf.cn/gjyp-01/02.jpg" alt=""/></div>
+  <div><img src="//tcnd.vaf.cn/gjyp-01/03.jpg" alt=""/></div>
+  <div><img src="//tcnd.vaf.cn/gjyp-01/04.jpg" alt=""/></div>
+  <div><img src="//tcnd.vaf.cn/gjyp-01/05.jpg" alt=""/></div>
+  <div class="fixed"><img src="//tcnd.vaf.cn/gjyp-01/fixed.png" alt=""/></div>
+
+  <footer class="footer">武汉掌游科技有限公司
+<br/>鄂ICP备14007714号</footer>
+  </a>
+  </div>
+
+<script src="//tcnd.vaf.cn/common/anfan-h5.js"></script>
+<script src="//tcnd.vaf.cn/common/dateinclude.js"></script></body>
+</html>
